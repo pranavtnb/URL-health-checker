@@ -1,4 +1,7 @@
-node_modules
-build
-.dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
 .env
+health_monitor.db
