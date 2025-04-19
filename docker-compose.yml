@@ -1,0 +1,21 @@
+# Docker Compose for URL Health Monitor
+services:
+  backend:
+    build: ./backend
+    container_name: url-health-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/health_monitor.db:/app/health_monitor.db
+      - ./backend/.env:/app/.env
+    environment:
+      - TZ=Asia/Kolkata
+  frontend:
+    build: ./frontend
+    container_name: url-health-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_BASE=http://localhost:8000
