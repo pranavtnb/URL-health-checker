@@ -1,0 +1,28 @@
+/* Add some basic global styles for a clean look */
+body {
+  background: #f5f6fa;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.MuiPaper-root {
+  border-radius: 12px;
+}
+
+.MuiButton-root {
+  text-transform: none;
+  font-weight: 600;
+}
+
+.MuiTableCell-head {
+  font-weight: 700;
+  background: #f0f4f8;
+}
+
+/* Responsive container */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 2vw !important;
+    padding-right: 2vw !important;
+  }
+}
